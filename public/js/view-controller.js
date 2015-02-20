@@ -1,4 +1,20 @@
-// TODO - get rid of jQuery!
+//************************************************************//
+// Title:    View Controller
+// Project:  Socket Chat
+// Author:   Nic Wolf
+// Sources:  None
+// Revision: 0.1.0 (2/20/2015)
+//************************************************************//
+/* Description:
+   Takes elements on the front end and appends new messages to 
+   them. Sets the chat message in a web socket.
+
+   TODOS:
+     - 
+
+   NOTES:
+     - 
+*/
 
 var socket = io();
 
