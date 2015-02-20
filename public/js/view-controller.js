@@ -10,11 +10,11 @@ function init() {
 	var txtInput   = document.getElementById('txtInput');
 	var ulMessages = document.getElementById('ulMessages');
 
-	frmMain.onsubmit = function() {
+	frmMain.onsubmit = function(event) {
+		event.preventDefault();
 		socket.emit('chat message', txtInput.value);
+		txtInput.value = "";
 	}//end onsubmit()
-
-	//if (txtInput.value === "") { return false; }
 
 	socket.on('chat message', function(msg) {
 		var newItem     = document.createElement("li"); // Create a <li> node
